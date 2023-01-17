@@ -2,13 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package kalkulator;
 
 /**
  *
  * @author Gigih Prasetyady
  */
-public class kalkulatorSederhana extends javax.swing.JFrame {
+public class kalkulatorSederhana_1 extends javax.swing.JFrame {
      String angka;
      Double jumlah, bil1, bil2;
      int pilih;
@@ -16,7 +15,7 @@ public class kalkulatorSederhana extends javax.swing.JFrame {
     /**
      * Creates new form kalkulatorSederhana
      */
-    public kalkulatorSederhana() {
+    public kalkulatorSederhana_1 () {
         initComponents();
         angka = "";
     }
@@ -49,10 +48,11 @@ public class kalkulatorSederhana extends javax.swing.JFrame {
         ANGKA2 = new javax.swing.JButton();
         ANGKA3 = new javax.swing.JButton();
         ANGKA0 = new javax.swing.JButton();
+        kembali = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
 
         hasil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -179,6 +179,14 @@ public class kalkulatorSederhana extends javax.swing.JFrame {
             }
         });
 
+        kembali.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        kembali.setText("FINISH");
+        kembali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kembaliActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -226,6 +234,10 @@ public class kalkulatorSederhana extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(hasil))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(kembali)
+                .addGap(71, 71, 71))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -259,7 +271,9 @@ public class kalkulatorSederhana extends javax.swing.JFrame {
                     .addComponent(ANGKA0, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HASIL, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(titik, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(kembali, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -398,11 +412,16 @@ public class kalkulatorSederhana extends javax.swing.JFrame {
     }//GEN-LAST:event_KALIActionPerformed
 
     private void BAGIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BAGIActionPerformed
-        bil1 = Double.parseDouble(angka);
+       bil1 = Double.parseDouble(angka);
         hasil.setText("/");
         angka = "";
         pilih =4;
     }//GEN-LAST:event_BAGIActionPerformed
+
+    private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
+        hal3 hal3 = new hal3();
+        hal3.setVisible(true);
+    }//GEN-LAST:event_kembaliActionPerformed
 
     /**
      * @param args the command line arguments
@@ -458,6 +477,7 @@ public class kalkulatorSederhana extends javax.swing.JFrame {
     private javax.swing.JButton TAMBAH;
     private javax.swing.JTextField hasil;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton kembali;
     private javax.swing.JButton titik;
     // End of variables declaration//GEN-END:variables
 }

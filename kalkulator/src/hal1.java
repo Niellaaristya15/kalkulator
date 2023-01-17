@@ -86,6 +86,7 @@ public class hal1 extends javax.swing.JFrame {
         kalkulatorSederhana_1 hv = new kalkulatorSederhana_1();
         hv.setVisible(true);
         
+        
     }//GEN-LAST:event_btnLOGINActionPerformed
 
     /**
