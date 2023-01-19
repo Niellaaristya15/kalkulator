@@ -384,6 +384,7 @@ public class kalkulatorSederhana_1 extends javax.swing.JFrame {
 
     private void HAPUSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HAPUSActionPerformed
         hasil.setText(angka);
+        
         bil1 = 0.0;
         bil2 = 0.0;
         jumlah = 0.0;
@@ -391,36 +392,49 @@ public class kalkulatorSederhana_1 extends javax.swing.JFrame {
     }//GEN-LAST:event_HAPUSActionPerformed
 
     private void TAMBAHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TAMBAHActionPerformed
-        bil1 = Double.parseDouble(angka);
+      try{  bil1 = Double.parseDouble(angka);
         hasil.setText("+");
         angka = "";
-        pilih =1;
+        pilih =1;}
+      catch (Exception e)
+      {System.out.println("Masukan angka dulu !");}
     }//GEN-LAST:event_TAMBAHActionPerformed
 
     private void KURANGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KURANGActionPerformed
-         bil1 = Double.parseDouble(angka);
+        try { bil1 = Double.parseDouble(angka);
         hasil.setText("-");
         angka = "";
-        pilih =2;
+        pilih =2;}
+        catch (Exception e){
+            System.out.println("Masukan angka dulu!");
+        }
     }//GEN-LAST:event_KURANGActionPerformed
 
     private void KALIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_KALIActionPerformed
-        bil1 = Double.parseDouble(angka);
+         try { bil1 = Double.parseDouble(angka);
         hasil.setText("*");
         angka = "";
-        pilih =3;
+        pilih =3;}
+        catch (Exception e){
+            System.out.println("Masukan angka dulu!");
+        }
     }//GEN-LAST:event_KALIActionPerformed
 
     private void BAGIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BAGIActionPerformed
-       bil1 = Double.parseDouble(angka);
+        try { bil1 = Double.parseDouble(angka);
         hasil.setText("/");
         angka = "";
-        pilih =4;
+        pilih =4;}
+        catch (Exception e){
+            System.out.println("Masukan angka dulu!");
+        }
     }//GEN-LAST:event_BAGIActionPerformed
 
     private void kembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kembaliActionPerformed
         hal3 hal3 = new hal3();
+         setLocationRelativeTo(null);
         hal3.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_kembaliActionPerformed
 
     /**
