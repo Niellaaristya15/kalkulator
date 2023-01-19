@@ -84,7 +84,9 @@ public class hal1 extends javax.swing.JFrame {
     private void btnLOGINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLOGINActionPerformed
 
         kalkulatorSederhana_1 hv = new kalkulatorSederhana_1();
+        setLocationRelativeTo(null);
         hv.setVisible(true);
+        this.setVisible(false);
         
         
     }//GEN-LAST:event_btnLOGINActionPerformed
